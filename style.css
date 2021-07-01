@@ -1,0 +1,298 @@
+:root {
+  /* primary */
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  /* Social btn */
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: hsl(329, 91%, 50%);
+  --YouTube: hsl(348, 97%, 39%);
+  /* Toggle button */
+  --Toggle-Dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --Toggle-Light: hsl(230, 22%, 74%);
+  /* #### Dark Theme */
+  --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Dark-Desaturated-Blue-Car-BG: hsl(228, 28%, 20%);
+  --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+  --White-Text: hsl(0, 0%, 100%);
+  /* #### Light Theme */
+  --White-BG: hsl(0, 0%, 100%);
+  --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+  --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+  --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+picture,
+h1,
+p,
+ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  background-color: var(--White-BG);
+}
+.dark-mode-body{
+    background-color: var(--Very-Dark-Blue-BG);
+}
+.container {
+    /* width: 40%; */
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    /* border: solid 1px lightgray; */
+}
+.header h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    text-align: left;
+}
+.dark-mode-header {
+    color: var(--White-Text);
+}
+.header p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: left;
+    color: var(--Dark-Grayish-Blue-Text);
+}
+.header hr {
+    width: 100%;
+    color: var(--Very-Dark-Blue-Text);
+    margin-top: 15px;
+}
+.toggle-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.toggle-container p {
+    color: var(--Toggle-Light);
+    font-weight: 700;
+    font-size: 1.3em;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 27px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Toggle-Light);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.dark-mode-slider{
+    background-color: var(--Toggle-Dark);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  /* background-color: var(--Lime-Green); */
+  background-color: #08AEEA;
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+}
+
+
+input:focus + .slider {
+  /* box-shadow: 0 0 1px var(--Lime-Green); */
+  box-shadow: #08AEEA;
+  box-shadow: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.social-card {
+    margin-top: 15px;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    height: 15em;
+    width: 100%;
+    border-radius: 10px;
+    border-top: 5px solid var(--Facebook);
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.dark-mode-card{
+    background-color: var(--Dark-Desaturated-Blue-Car-BG);
+}
+.youtube-border{
+    border-top: 5px solid var(--YouTube);
+}
+.instagram-border{
+    border-top: 5px solid var(--Instagram);
+}
+.twitter-border{
+    border-top: 5px solid var(--Twitter);
+}
+.facebook-border{
+    border-top: 5px solid var(--Facebook);
+}
+
+.followers-count {
+    font-size: 4em;
+    font-weight: 700;
+}
+.dark-mode-followers-count{
+    color: var(--White-Text);
+}
+.followers-text{
+    font-size: 1.5em;
+    color: var(--Desaturated-Blue-Text);
+}
+.card-icon-username{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px auto;
+}
+.card-icon-username p {
+    margin-left: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue-Text);
+}
+.followers-growth{
+    color: var(--Lime-Green);
+    font-size: 1.2em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.gutter {
+    margin-left: 5px;
+}
+.overview-card{
+    margin-top: 15px;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    height: 10em;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+.dark-mode-overview-card{
+    background-color: var(--Dark-Desaturated-Blue-Car-BG);
+}
+.overview-heading h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 25px;
+    color: var(--Desaturated-Blue-Text);
+}
+.dark-mode-overview-heading {
+    color: var(--White-Text);
+}
+
+.stat-title-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.stat-title-icon p {
+    color: var(--Toggle-Light);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.stat-data-growth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-data-growth .data {
+    font-size: 2em;
+    font-weight: 700;
+}
+.dark-mode-data{
+    color: var(--White-Text);
+}
+
+.stat-data-growth .growth{
+    color: var(--Lime-Green);
+    font-weight: 700;
+}
+.growth-percentage-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
