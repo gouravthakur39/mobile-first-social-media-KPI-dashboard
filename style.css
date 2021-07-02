@@ -286,9 +286,12 @@ input:checked + .slider:before {
 .dark-mode-data{
     color: var(--White-Text);
 }
-
 .stat-data-growth .growth{
     color: var(--Lime-Green);
+    font-weight: 700;
+}
+.stat-data-growth .decline{
+    color: var(--Bright-Red);
     font-weight: 700;
 }
 .growth-percentage-icon{
@@ -296,3 +299,22 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
 }
+
+/* ipad and tablets */
+@media only screen and (min-width: 600px) {
+   body{
+       display: flex;
+       flex-direction: column;
+   }
+   .social-card-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+   }
+   .overview-container {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+}
+
