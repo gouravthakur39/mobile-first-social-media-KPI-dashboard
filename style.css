@@ -316,5 +316,50 @@ input:checked + .slider:before {
        flex-direction: row;
        flex-wrap: wrap;
    }
+   .stats-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.stats-row .overview-card {
+    margin: 10px;
+}
 }
 
+/* Laptop and bigger screen */
+@media only screen and (min-width: 1025px) {
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+    .social-card-container {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+    }
+   
+    .social-card{
+        margin: 10px;
+
+    }
+    .overview-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .stats-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .stats-row .overview-card {
+        margin: 10px;
+    }
+}
